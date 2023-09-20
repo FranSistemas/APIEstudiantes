@@ -25,3 +25,10 @@ C:\Users\franc\APIEstudiantes\APIEstudiantes\obj\Debug\net6.0\refint\APIEstudian
 C:\Users\franc\APIEstudiantes\APIEstudiantes\obj\Debug\net6.0\APIEstudiantes.pdb
 C:\Users\franc\APIEstudiantes\APIEstudiantes\obj\Debug\net6.0\APIEstudiantes.genruntimeconfig.cache
 C:\Users\franc\APIEstudiantes\APIEstudiantes\obj\Debug\net6.0\ref\APIEstudiantes.dll
+C:\Users\franc\APIEstudiantes\APIEstudiantes\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\franc\APIEstudiantes\APIEstudiantes\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\franc\APIEstudiantes\APIEstudiantes\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\franc\APIEstudiantes\APIEstudiantes\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\franc\APIEstudiantes\APIEstudiantes\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\franc\APIEstudiantes\APIEstudiantes\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\franc\APIEstudiantes\APIEstudiantes\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll

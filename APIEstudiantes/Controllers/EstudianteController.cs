@@ -2,17 +2,21 @@ using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
 using APIEstudiantes.Modelos;
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace APIEstudiantes.Controllers
 {
     [Route("api/estudiantes")]
     [ApiController]
+    [Authorize]
     public class EstudianteController : ControllerBase
     {
 
         private ListaEstudiante listaEstudiante = new ListaEstudiante(); // Declaración de la lista de estudiantes
         // GET: api/estudiantes
         [HttpGet]
+        [Authorize("read:estudiantes")]
         public ActionResult<IEnumerable<Estudiante>> Get()
         {
             return Ok(listaEstudiante.listaEstudiante()); // Llama al método listaEstudiante() sin paréntesis
@@ -20,6 +24,7 @@ namespace APIEstudiantes.Controllers
 
         // GET: api/estudiantes/5
         [HttpGet("{ID}")]
+        [Authorize("read:estudiantes")]
         public ActionResult<Estudiante> Get(int id)
         {
             // Utiliza LINQ para buscar el estudiante por su ID
@@ -32,6 +37,7 @@ namespace APIEstudiantes.Controllers
             return Ok(estudianteEncontrado); // Devuelve el estudiante como respuesta si se encuentra
         }
         [HttpPost]
+        [Authorize("write:estudiantes")]
         public ActionResult<Estudiante> Post([FromBody] Estudiante estudiante)
         {
             if (estudiante == null)
@@ -49,6 +55,7 @@ namespace APIEstudiantes.Controllers
             return CreatedAtAction(nameof(Get), new { id = estudiante.ID }, estudiante);
         }
         [HttpPut("{ID}")]
+        [Authorize("write:estudiantes")]
         public ActionResult<Estudiante> Put(int ID, [FromBody] Estudiante estudiante)
     
         {
@@ -72,6 +79,7 @@ namespace APIEstudiantes.Controllers
             return Ok(estudianteExistente); // Devuelve el estudiante actualizado como respuesta
         }
         [HttpDelete("{ID}")]
+        [Authorize("write:estudiantes")]
         public ActionResult Delete(int ID)
         {
         // Buscar el estudiante por su ID
